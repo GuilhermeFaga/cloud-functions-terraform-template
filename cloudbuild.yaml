@@ -24,7 +24,7 @@ steps:
               echo "***********************"
 
     - id: 'tf init'
-      name: 'gcr.io/${PROJECT_ID}/terraform'
+      name: 'hashicorp/terraform'
       entrypoint: 'sh'
       args:
           - '-c'
@@ -49,7 +49,7 @@ steps:
 
     # [START tf-plan]
     - id: 'tf plan'
-      name: 'gcr.io/${PROJECT_ID}/terraform'
+      name: 'hashicorp/terraform'
       entrypoint: 'sh'
       args:
           - '-c'
@@ -74,7 +74,7 @@ steps:
     # [END tf-plan]
     # [START tf-apply]
     - id: 'tf apply'
-      name: 'gcr.io/${PROJECT_ID}/terraform'
+      name: 'hashicorp/terraform'
       entrypoint: 'sh'
       args:
           - '-c'
